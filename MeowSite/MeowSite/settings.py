@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from .secret import secret_key, debug
+from MeowSite.MeowSite.secret import secret_key, debug, hosts
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +26,7 @@ SECRET_KEY = secret_key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = debug
 
-ALLOWED_HOSTS = ["mironovmeow.pythonanywhere.com"]
+ALLOWED_HOSTS = hosts
 
 
 # Application definition
