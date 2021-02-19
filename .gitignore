@@ -1,2 +1,9 @@
 /venv
 /.idea
+/.git
+
+__pycache__/
+*.pyc
+
+/MeowSite/db.sqlite3
+/MeowSite/MeowSite/secret.py
