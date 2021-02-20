@@ -28,6 +28,7 @@ DEBUG = debug
 
 ALLOWED_HOSTS = hosts
 
+X_FRAME_OPTIONS = 'ALLOW-FROM https://vk.com/'
 
 # Application definition
 
