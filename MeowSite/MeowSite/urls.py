@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from MeowSite.IndexApp import views as IndexAppViews
+from MeowSite.IndexApp import views as index_app_views
+from MeowSite.VKTesters import views as vk_testers_views
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', IndexAppViews.index)
+    path('', index_app_views.index),
+    path('vkapp/', vk_testers_views.start)
 ]
