@@ -21,7 +21,7 @@ def decorate_vk_auth(func, method="GET"):
             vk_subset = OrderedDict(sorted(x for x in query.items() if x[0][:3] == "vk_"))
             hash_code = b64encode(HMAC(vk_secret.encode(), urlencode(vk_subset, doseq=True).encode(), sha256).digest())
             decoded_hash_code = hash_code.decode('utf-8')[:-1].replace('+', '-').replace('/', '_')
-            if decoded_hash_code:
+            if query["sign"] == decoded_hash_code:
                 return func(request)
             else:
                 return HttpResponseForbidden("Auth Error")
