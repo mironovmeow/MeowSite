@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotAllowed, HttpResponseForbidden
 
-from MeowSite.MeowSite.secret import vk_secret
+from MeowSite.secret import vk_secret
 from collections import OrderedDict
 from urllib.parse import urlencode
 from base64 import b64encode
