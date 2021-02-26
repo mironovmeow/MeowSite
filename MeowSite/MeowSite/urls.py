@@ -14,12 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from IndexApp import views as index_app_views
-from VKTesters import views as vk_testers_views
+from MeowSite.secret import debug
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
     path('', index_app_views.index),
-    path('vkapp/', vk_testers_views.start)
+    path('vk_app/', include('VKTesters.urls'))
 ]
+
+if debug:
+    urlpatterns.append(
+        path('admin/', admin.site.urls),
+    )
