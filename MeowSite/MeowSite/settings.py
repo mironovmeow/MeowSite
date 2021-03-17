@@ -39,6 +39,7 @@ SESSION_SAVE_EVERY_REQUEST = True
 
 INSTALLED_APPS = [
     'IndexApp',
+    'MeowNetwork',
     'VKTesters',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -63,8 +64,8 @@ ROOT_URLCONF = 'MeowSite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates'],
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
