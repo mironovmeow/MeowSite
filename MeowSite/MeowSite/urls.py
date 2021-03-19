@@ -19,8 +19,9 @@ from IndexApp import views as index_app_views
 from MeowSite.secret import debug
 
 urlpatterns = [
-    path('', index_app_views.index),
-    path('vk_app/', include('VKTesters.urls'))
+    path('vk_app/', include('VKTesters.urls')),
+    path('meow_network/', include('MeowNetwork.urls')),
+    # path('', index_app_views.index)
 ]
 
 if debug:

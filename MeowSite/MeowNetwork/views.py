@@ -8,7 +8,8 @@ from django.contrib.auth.decorators import login_required
 # @login_required()
 def auth(request: HttpRequest):
     if request.method == "GET":
-        return render(request, "auth.html")
+        return render(request, "network/auth.html")
 
     login, password = request.POST.get("login"), request.POST.get("login")
+    authenticate(request, username=username, password=password)
 

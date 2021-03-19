@@ -28,19 +28,12 @@ DEBUG = debug
 
 ALLOWED_HOSTS = hosts
 
-# For saving cookies cross VK iFrame
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SAMESITE = 'None'
-SESSION_COOKIE_SAMESITE = 'None'
-SESSION_SAVE_EVERY_REQUEST = True
-
 # Application definition
 
 INSTALLED_APPS = [
     'IndexApp',
     'MeowNetwork',
-    'VKTesters',
+    'VKTesters.apps.VktestersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
