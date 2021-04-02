@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from IndexApp import views as index_app_views
+# from IndexApp import views as index_app_views
 from MeowSite.secret import debug
 
 urlpatterns = [

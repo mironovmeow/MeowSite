@@ -33,7 +33,7 @@ ALLOWED_HOSTS = hosts
 INSTALLED_APPS = [
     'IndexApp',
     'MeowNetwork',
-    'VKTesters.apps.VktestersConfig',
+    'VKTesters.apps.VktestersConfig',  # For VK iFrame
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
